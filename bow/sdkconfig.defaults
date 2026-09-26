@@ -1,0 +1,16 @@
+# Смычок: M5Stack StickS3 (ESP32-S3-PICO-1-N8R8, 8 МБ flash, 8 МБ PSRAM).
+CONFIG_IDF_TARGET="esp32s3"
+CONFIG_ESPTOOLPY_FLASHSIZE_8MB=y
+CONFIG_PARTITION_TABLE_CUSTOM=y
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions.csv"
+
+# PSRAM выключена намеренно: смычку она не нужна (IMU + радио умещаются во
+# внутреннюю память), а режим PSRAM на этом модуле надо подтвердить на живой
+# плате в фазе 1 — неверная настройка стоит незагрузки.
+CONFIG_SPIRAM=n
+
+CONFIG_FREERTOS_HZ=1000
+CONFIG_COMPILER_OPTIMIZATION_PERF=y
+
+# Радио — на ядре 0, там же, где опрос IMU и передача.
+CONFIG_ESP_WIFI_TASK_PINNED_TO_CORE_0=y

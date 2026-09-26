@@ -1,0 +1,11 @@
+.pio/
+build/
+sdkconfig
+sdkconfig.old
+sdkconfig.neck
+sdkconfig.bow
+dependencies.lock
+managed_components/
+*.wav
+.cache/
+compile_commands.json

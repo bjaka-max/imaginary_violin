@@ -1,0 +1,25 @@
+{
+  "build": {
+    "core": "esp32",
+    "extra_flags": [],
+    "f_cpu": "240000000L",
+    "f_flash": "80000000L",
+    "flash_mode": "qio",
+    "hwids": [["0x303A", "0x1001"]],
+    "mcu": "esp32s3",
+    "variant": "esp32s3"
+  },
+  "connectivity": ["wifi", "bluetooth"],
+  "debug": { "openocd_target": "esp32s3.cfg" },
+  "frameworks": ["espidf"],
+  "name": "Imaginary Violin - смычок (M5Stack StickS3)",
+  "upload": {
+    "flash_size": "8MB",
+    "maximum_ram_size": 327680,
+    "maximum_size": 8388608,
+    "require_upload_port": true,
+    "speed": 460800
+  },
+  "url": "https://docs.m5stack.com/en/core/StickS3",
+  "vendor": "M5Stack"
+}

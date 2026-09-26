@@ -1,0 +1,8 @@
+dependencies:
+  # Расширитель ввода-вывода: питание, подсветка, сброс дисплея.
+  espressif/esp_io_expander_tca9554: "^2.0.1"
+  # Контроллер дисплея 172x640 по QSPI. Тач сидит в этом же чипе,
+  # но читается напрямую по I2C — см. bsp_touch.c.
+  espressif/esp_lcd_axs15231b: "^2.1.0"
+  # Кодек ES8311 и обвязка I2S.
+  espressif/esp_codec_dev: "^1.3.1"
